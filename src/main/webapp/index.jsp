@@ -44,30 +44,30 @@
 <body>
 <div id="header">
     <%-- PAGE TITLE --%>
-    <h1>PlantUML Server</h1>
+    <h1>PlantUML服务器</h1>
     <c:if test="${cfg['SHOW_SOCIAL_BUTTONS'] eq 'on' }">
         <%@ include file="resource/socialbuttons1.html" %>
     </c:if>
     <c:if test="${cfg['SHOW_GITHUB_RIBBON'] eq 'on' }">
         <%@ include file="resource/githubribbon.html" %>
     </c:if>
-    <p>Create your <a href="http://plantuml.com">PlantUML</a> diagrams directly in your browser !</p>
+    <p><a href="http://plantuml.com">浏览器内点击链接直接制作Plant-UML~</a></p>
 </div>
 <div id="content">
     <%-- CONTENT --%>
     <form method="post" accept-charset="UTF-8"  action="${contextroot}/form">
         <p>
             <textarea id="text" name="text" cols="120" rows="10"><c:out value="${decoded}"/></textarea>
-            <input type="submit" />
+            <input type="submit" value="生成" />
         </p>
     </form>
     <hr/>
-    <p>You can enter here a previously generated URL:</p>
+    <p>可以再这里输入一个之前生成的uml图片地址:</p>
     <form method="post" action="${contextroot}/form">
         <p>
             <input name="url" type="text" size="150" value="${imgurl}" />
             <br/>
-            <input type="submit"/>
+            <input type="submit" value="生成"/>
         </p>
     </form>
     <c:if test="${!empty imgurl}">
