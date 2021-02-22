@@ -62,18 +62,18 @@
         </p>
     </form>
     <hr/>
-    <p>可以再这里输入一个之前生成的uml图片地址:</p>
+    <p>可以在这里输入一个之前生成的uml图片地址并点击下面的按钮来载入:</p>
     <form method="post" action="${contextroot}/form">
         <p>
             <input name="url" type="text" size="150" value="${imgurl}" />
             <br/>
-            <input type="submit" value="生成"/>
+            <input type="submit" value="加载"/>
         </p>
     </form>
     <c:if test="${!empty imgurl}">
         <hr/>
-        <a href="${svgurl}">View as SVG</a>&nbsp;
-        <a href="${txturl}">View as ASCII Art</a>&nbsp;
+        <a href="${svgurl}">以SVG矢量图展示</a>&nbsp;
+        <a href="${txturl}">用艺术字展示</a>&nbsp;
         <c:if test="${!empty mapurl}">
             <a href="${mapurl}">View Map Data</a>
         </c:if>

@@ -10,4 +10,4 @@ services:
     image: plantuml/plantuml-server:local
     container_name: plantuml-server
     ports:
-      - 8080:8080
+      - 8089:8080
