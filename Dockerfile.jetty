@@ -1,5 +1,6 @@
 FROM maven:3-jdk-11 AS builderjetty
 
+COPY settings.xml /etc/maven/settings.xml
 COPY pom.xml /app/
 COPY src /app/src/
 
