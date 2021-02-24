@@ -40,6 +40,13 @@
               <value>${jetty.port}</value>
             </systemProperty>
           </systemProperties>
+          <connectors>
+            <connector implementation="org.eclipse.jetty.server.ssl.SslSelectChannelConnector">
+              <port>9095</port>
+              <password>t85du14vhv3y4v</password>
+              <keystore>https://web.53jy.net/files/ssl/53jy/53jy.net.jks</keystore>
+            </connector>
+          </connectors>
         </configuration>
       </plugin>
         <plugin>
