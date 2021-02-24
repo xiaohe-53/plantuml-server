@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile.jetty
       args:
         BASE_URL: plantuml
-    image: plantuml/plantuml-server:cloud
+    image: plantuml/plantuml-server:ssl
     container_name: plantuml-server
     ports:
       - 8089:8080
