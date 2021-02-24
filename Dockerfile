@@ -12,7 +12,11 @@ RUN mvn package
 # chmod required to ensure any user can run the app
 RUN mkdir /app/.m2 && chmod -R a+w /app
 EXPOSE 8080
+EXPOSE 9095
 ENV HOME /app
+
+FROM jetty
+RUN java -jar "$JETTY_HOME/start.jar" --add-to-startd=https
 
 CMD java -Djetty.contextpath=/ -jar target/dependency/jetty-runner.jar target/plantuml.war
 
